@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+//added three below and added .NET reference system.speek over there -->
+using System.Speech.Synthesis;
+using System.Speech.Recognition;
+using System.Threading;
 
 
 namespace OpenPoppy
@@ -20,7 +24,10 @@ namespace OpenPoppy
         }
 
         int routselect = 0;
-
+        int sound = 0;
+        // speech recognition and synthisis
+        SpeechSynthesizer sspeech = new SpeechSynthesizer();
+        PromptBuilder pbuilder = new PromptBuilder();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -79,9 +86,15 @@ namespace OpenPoppy
 
             UpdateTextBox();
 
-
-
             TxtInput.Text = "";
+
+            if (sound == 0)
+            {
+                pbuilder.ClearContent();
+                pbuilder.AppendText(lblpoppy1.Text);
+                sspeech.Speak(pbuilder);
+            }
+            
 
 
         }
@@ -401,6 +414,21 @@ TxtInput.Text.Contains("Good thanks, you") || TxtInput.Text.Contains("Good thank
                 Meaning();
             }
 
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (sound == 0)
+            {
+                sound = 1;
+                pictureBox2.Image = OpenPoppy.Properties.Resources.Speaker_Icon_rtl2;
+            }
+            else
+            {
+                sound = 0;
+                pictureBox2.Image = OpenPoppy.Properties.Resources.Speaker_Icon_rtl;
+            }
 
         }
 

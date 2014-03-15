@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtInput = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblperson9 = new System.Windows.Forms.Label();
@@ -53,30 +52,23 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.referencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OpenPoppy.Properties.Resources.girl;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 311);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // TxtInput
             // 
             this.TxtInput.Location = new System.Drawing.Point(227, 313);
             this.TxtInput.Name = "TxtInput";
-            this.TxtInput.Size = new System.Drawing.Size(183, 20);
+            this.TxtInput.Size = new System.Drawing.Size(159, 20);
             this.TxtInput.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(416, 313);
+            this.button1.Location = new System.Drawing.Point(392, 310);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -287,14 +279,35 @@
             // referencesToolStripMenuItem
             // 
             this.referencesToolStripMenuItem.Name = "referencesToolStripMenuItem";
-            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.referencesToolStripMenuItem.Text = "References";
             // 
             // licencesToolStripMenuItem
             // 
             this.licencesToolStripMenuItem.Name = "licencesToolStripMenuItem";
-            this.licencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.licencesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.licencesToolStripMenuItem.Text = "Licences";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OpenPoppy.Properties.Resources.girl;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 311);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::OpenPoppy.Properties.Resources.Speaker_Icon_rtl;
+            this.pictureBox2.Location = new System.Drawing.Point(474, 310);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
@@ -302,6 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 354);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblpoppy1);
             this.Controls.Add(this.lblyou1);
             this.Controls.Add(this.lblpoppy2);
@@ -328,9 +342,10 @@
             this.Name = "Form1";
             this.Text = "OpenPoppy";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +378,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem referencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licencesToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
